@@ -21,5 +21,20 @@ namespace Subby {
         public MainWindow() {
             InitializeComponent();
         }
+
+        private void btnOpenWindow_Click(object sender, RoutedEventArgs e) {
+            SuperHero h = new SuperHero("","");
+
+            Universe.Inhabitants.Add(h);
+
+          
+
+            SubForm sub = new SubForm();
+            sub.ShowDialog();
+            //MainWindow m = new MainWindow();
+            //m.Show();
+
+
+        }
     }
 }
