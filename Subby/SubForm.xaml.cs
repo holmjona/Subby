@@ -22,11 +22,18 @@ namespace Subby {
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e) {
-            this.Close();
+            int minAge = Universe.Inhabitants.Min(x => x.Age);
+            tbxName.Text = minAge.ToString();
+            //this.Close();
         }
 
         private void btnClose2_Click(object sender, RoutedEventArgs e) {
             Application.Current.Shutdown();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

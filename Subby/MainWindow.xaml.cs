@@ -24,8 +24,13 @@ namespace Subby {
 
         private void btnOpenWindow_Click(object sender, RoutedEventArgs e) {
             SuperHero h = new SuperHero("","");
+            h.DateOfBirth = DateTime.Now;
+
+            SuperHero h2 = new SuperHero("George", "Smith");
+            h2.DateOfBirth = DateTime.Now.AddYears(10);
 
             Universe.Inhabitants.Add(h);
+            Universe.Inhabitants.Add(h2);
 
           
 
